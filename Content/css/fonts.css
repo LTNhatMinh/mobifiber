@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "VIEHandelGothicBold";
+    src: url('/Content/fonts/VIE-HandelGothic-Bold_0.otf');
+}
+
+@font-face {
+    font-family: "VIEHandelGothicBoldItalic";
+    src: url('/Content/fonts/VIE-HandelGothic-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: "VIEHandelGothicMediumItal";
+    src: url('/Content/fonts/VIE-HandelGothic-MediumItal_0.otf');
+}
+
+@font-face {
+    font-family: "VIEHandelGothicMedium";
+    src: url('/Content/fonts/VIE-HandelGothic Medium_0.otf');
+}
+
+/* Custom CSS to remove the default arrow */
+.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    padding-right: 25px;
+    /* You can adjust this for spacing */
+}
+
+/* Optional: Add a custom arrow using a pseudo-element */
+.custom-select::after {
+    content: '\25BC';
+    /* Downward arrow (Unicode character) */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0053ad;
+    /* Set color to match your design */
+    font-size: 18px;
+    /* Adjust size as needed */
+}
+
+#successMessage {
+    display: none;
+    /* Ẩn mặc định */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Làm mờ nền */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+#successMessage button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
